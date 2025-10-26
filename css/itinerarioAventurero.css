@@ -1,0 +1,567 @@
+@charset "UTF-8";
+/* Variables */
+/* Encabezado */
+.header-section {
+  text-align: center;
+  padding: 150px 0 50px;
+  background-color: #17a2b8;
+}
+
+.header-section h1 {
+  font-size: 64px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.header-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.header-section p {
+  font-size: 16px;
+  color: #aaa;
+}
+
+/* Estilo para la tarjeta con recorte semicircular */
+.feature-card-enc {
+  background-color: rgba(57, 255, 7, 0.3843137255);
+  text-align: center;
+  position: relative;
+  padding-top: 69px;
+  margin-top: 70px;
+  padding-bottom: 20px;
+  border-radius: 0 0 10px 10px;
+  width: 150px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Ícono circular */
+.feature-card-enc .icon {
+  background-color: #17a2b8;
+  width: 100px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Recorte semicircular */
+.feature-card-enc::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  border-radius: 0 0 100% 100%;
+  opacity: 0;
+}
+
+/* Estilo del texto de la tarjeta */
+.feature-card-enc p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: rgb(0, 156, 252);
+  font-weight: bold;
+}
+
+/* Ajuste responsivo para centrar las tarjetas en pantallas pequeñas */
+.card-section1 {
+  display: block;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px 0;
+}
+
+@media (min-width: 768px) {
+  .card-section1 {
+    justify-content: space-evenly;
+  }
+}
+/* Fondo gris oscuro transparente */
+.background-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Barra de navegación */
+.navbar {
+  background-color: rgba(18, 53, 51, 0.75);
+}
+.navbar a {
+  color: #e0f2f1;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+.navbar a:hover {
+  background-color: #287c88;
+}
+
+/* Sección general y tarjetas */
+.menu-section, .event-listing {
+  padding: 60px 0;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.menu-section {
+  background-image: url("../Img/menuit2.jpg");
+}
+
+.header-section {
+  background-image: url("../Img/fondoaventura.png");
+}
+
+.event-listing {
+  background-image: url("../Img/morro.png");
+}
+
+.Alojamiento {
+  background-image: url("../Img/hotelnabu.jpg");
+}
+
+.menu-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: rgba(58, 143, 183, 0.9529411765);
+  text-align: center;
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Tarjetas del menú y eventos */
+.menu-card, .event-card {
+  background-color: rgba(0, 0, 0, 0.225);
+  border-radius: 15px;
+  padding: 20px;
+  color: #e0f2f1;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, background-color 0.3s;
+}
+.menu-card:hover, .event-card:hover {
+  transform: translateY(-10px);
+  background-color: #355c7d;
+}
+
+/* Elementos del menú */
+.menu-item, .event-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 15px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.menu-item img:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+/* Textos de menú y eventos */
+.menu-item-text, .event-info {
+  flex: 1;
+}
+
+.menu-item-title, .event-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.menu-item-price {
+  font-size: 16px;
+  color: #d4a373;
+}
+
+.menu-item-description {
+  font-size: 14px;
+  color: #c5c5c5;
+}
+
+.event-tickets {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.purchase-btn {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.purchase-btn:hover {
+  background-color: #555;
+}
+
+/* Secciones */
+section {
+  height: 150vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#aloj-tittle {
+  text-align: center;
+  padding: 20px;
+  font-size: 36px;
+}
+
+.container-alo {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.room-alo {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 20px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+.room-alo img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: transform 0.4s ease;
+}
+.room-alo h2 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+.room-alo .price-alo {
+  font-size: 28px;
+  color: #333;
+}
+.room-alo .details-alo {
+  font-size: 16px;
+  color: #666;
+  margin: 10px 0;
+  text-align: left;
+  padding: 0 20px;
+}
+.room-alo .details-alo li {
+  margin-bottom: 5px;
+}
+.room-alo:hover {
+  transform: scale(1.05); /* Slight zoom in */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow */
+}
+
+/* Loading effect */
+.room-alo {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+.room-alo:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.room-alo:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.room-alo:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+/* General video styling */
+.promo-video {
+  position: relative;
+  color: white;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.promo-video video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  object-fit: cover;
+}
+.promo-video .promo-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: background 0.3s ease;
+  border-radius: 15px;
+}
+.promo-video .promo-overlay:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.promo-video .promo-text,
+.promo-video .promo-hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+.promo-video .promo-text.promo-text,
+.promo-video .promo-hover-text.promo-text {
+  font-size: 1.8rem;
+  color: white;
+  opacity: 1;
+}
+.promo-video .promo-text.promo-hover-text,
+.promo-video .promo-hover-text.promo-hover-text {
+  opacity: 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+.promo-video .promo-text.promo-hover-text ul,
+.promo-video .promo-hover-text.promo-hover-text ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+}
+.promo-video .promo-text.promo-hover-text ul li::before,
+.promo-video .promo-hover-text.promo-hover-text ul li::before {
+  content: "• ";
+  color: #ffcc00;
+}
+.promo-video:hover .promo-hover-text {
+  opacity: 1;
+}
+.promo-video:hover .promo-text {
+  opacity: 0;
+}
+
+.card img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.accommodation-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.accommodation-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.card img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #343a40; /* Color del texto (puedes ajustar según prefieras) */
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #6c757d; /* Color del texto secundario (puedes ajustar según prefieras) */
+}
+
+.card-body {
+  background-color: #ffffff; /* Color de fondo del cuerpo de la tarjeta */
+}
+
+.card-body i {
+  color: #f53e06; /* Color de los iconos (puedes ajustar según prefieras) */
+}
+
+/* Estilos para los títulos */
+/* Efecto hover para las tarjetas */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para las imágenes de las tarjetas */
+.card img {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+/* Etiquetas de recomendación y nuevo */
+.position-absolute {
+  font-size: 0.9rem;
+  font-weight: bold;
+  opacity: 0.9;
+}
+
+.bg-dark {
+  background-color: #343a40 !important;
+}
+
+.bg-info {
+  background-color: #17a2b8 !important;
+}
+
+/* Encabezado */
+.header-section {
+  text-align: center;
+  padding: 150px 0 50px;
+  background-color: #17a2b8;
+}
+
+.header-section h1 {
+  font-size: 64px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.header-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.header-section p {
+  font-size: 16px;
+  color: #aaa;
+}
+
+/* Estilo para la tarjeta con recorte semicircular */
+.feature-card-enc {
+  background-color: rgba(48, 135, 167, 0.5803921569);
+  text-align: center;
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-radius: 0 0 10px 10px;
+  width: 130px;
+  height: 120px;
+}
+
+/* Ícono circular */
+.feature-card-enc .icon {
+  background-color: rgba(23, 163, 184, 0.031372549);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Recorte semicircular */
+.feature-card-enc::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  border-radius: 0 0 100% 100%;
+}
+
+/* Estilo del texto de la tarjeta */
+.feature-card-enc p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Ajuste responsivo para centrar las tarjetas en pantallas pequeñas */
+.card-section1 {
+  display: block;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px 0;
+}
+
+@media (min-width: 768px) {
+  .card-section1 {
+    justify-content: space-evenly;
+  }
+}
+/* Fondo gris oscuro transparente */
+.background-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.fondoletra div {
+  background: rgba(175, 172, 172, 0.548);
+  border-radius: 5%;
+  opacity: 0.9;
+}
+
+.fixed-size {
+  width: 100%; /* Para que ocupe todo el ancho de la columna */
+  height: 300px; /* Asignar una altura fija */
+  object-fit: cover; /* Para que las imágenes se ajusten sin deformarse */
+}
+
+/*# sourceMappingURL=itinerarioAventurero.css.map */

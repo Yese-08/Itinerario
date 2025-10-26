@@ -1,0 +1,12 @@
+// _loops.scss
+//La opacidad del color de las tarjetas aumenta
+@for $i from 1 through 4 {
+    .card-day#{$i} {
+      background-color: lighten($secondary-color, $i * 5%);
+      
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      
+    }
+  }
+  

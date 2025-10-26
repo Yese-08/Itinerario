@@ -1,0 +1,230 @@
+@import 'variables';
+@import 'mixins';
+
+// Clases reutilizables
+
+// Base para enlaces y botones con transiciones
+.transicion-enlace {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  height: 60px;
+  @include transition(background-color, 0.3s);
+  
+  &:hover {
+    background-color: $dorado;
+    color: $blanco;
+  }
+}
+
+// Base para bordes redondeados
+.bordes-redondeados {
+  @include border-radius(5%);
+}
+
+// Base para sombras
+.sombras {
+  @include box-shadow();
+}
+
+// Base para transiciones en transformaciones
+.transicion-transform {
+  @include transition(transform, 0.2s);
+}
+
+// Base para textos centrados y con sombra
+.texto-centrado-con-sombra {
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+// Navbar
+.navbar {
+  background-color: $blanco;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+
+  a {
+    color: $blanco;
+    padding: 14px 20px;
+    @extend .transicion-enlace; // Usa la clase de transiciones
+  }
+}
+
+// Dropdown
+.dropdown-menu .dropdown-item {
+  background-color: $blanco;
+  color: #000;
+  padding: 10px 20px;
+}
+
+// Intro
+.intro {
+  padding: 180px 20px;
+  color: $blanco;
+  @extend .texto-centrado-con-sombra; // Usa la clase para textos centrados y con sombra
+
+  h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  div {
+    background: rgba(58, 55, 55, 0.3);
+    @extend .bordes-redondeados; // Usa la clase de bordes redondeados
+  }
+}
+
+// Table
+.table {
+  background-color: $blanco;
+  @extend .bordes-redondeados; // Usa la clase de bordes redondeados
+  overflow: hidden;
+  @extend .sombras; // Usa la clase de sombras
+}
+
+// Agent Info
+.agent-info img {
+  @include border-radius(50%); // Aplica un borde redondeado del 50% para imágenes circulares
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+// Action Icons
+.action-icons i {
+  cursor: pointer;
+  margin-right: 10px;
+  @extend .transicion-transform; // Usa la clase de transiciones en transformaciones
+
+  &:hover {
+    transform: scale(1.2); // Aumenta el tamaño del icono al pasar el ratón
+  }
+}
+
+// Image Container
+.contenedorp2-imagen {
+  position: relative;
+  overflow: hidden;
+  @include transition(transform, 0.4s, ease); // Usa el mixin de transición para un efecto suave al escalar
+  @extend .bordes-redondeados; // Usa la clase de bordes redondeados
+  @extend .sombras; // Usa la clase de sombras
+  max-width: 300px;
+  margin: 15px;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    @include transition(transform); // Aplica el mixin de transición para el escalado
+  }
+
+  &:hover {
+    transform: scale(1.5, 1.1); // Escala la imagen al pasar el ratón
+    @include border-radius(8px); // Aumenta el radio de bordes al pasar el ratón
+    z-index: 1;
+
+    img {
+      transform: scale(1); // Restablece la escala de la imagen al pasar el ratón
+    }
+  }
+}
+
+// Navbar Brand
+.navbar-brand img {
+  width: 30px; // Ajusta el tamaño del icono
+  height: auto; // Mantiene la proporción
+}
+
+// Video Background
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  video {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover; // Asegura que el video cubra toda el área
+  }
+}
+
+// General Section
+.gen {
+  background: $verde-transparente;
+}
+
+// Heading
+h2.text-center {
+  font-family: 'Arial', sans-serif; // Cambia el tipo de letra
+  font-size: 36px;
+  color: $marron-texto; // Color del texto
+  text-transform: uppercase; // Pone el texto en mayúsculas
+  letter-spacing: 2px; // Espaciado entre letras
+  font-weight: bold;
+  margin: 20px 0; // Espacio superior e inferior
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); // Agrega sombra al texto
+  border-bottom: 2px solid $azul-oscuro; // Línea debajo del título
+  display: inline-block;
+  padding-bottom: 10px; // Espacio entre el texto y la línea
+}
+
+// Test Image
+.test-img img:hover {
+  transform: scale(1.07); // Aumenta ligeramente el tamaño al pasar el ratón
+}
+
+// Image Hover
+.image-hover:hover {
+  cursor: pointer; // Cambia el cursor al pasar el ratón sobre la imagen
+}
+
+// Feature Card Text
+.feature-card-enc p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: $blanco; // Color del texto de la tarjeta
+  font-weight: bold;
+}
+
+// Card Section
+.card-section1 {
+  display: block;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px 0;
+
+  @media (min-width: 768px) {
+    justify-content: space-evenly; // Distribuye las tarjetas uniformemente en pantallas más grandes
+  }
+}
+
+// Background Overlay
+.background-overlay {
+  background-color: $negro-transparente; // Fondo gris oscuro transparente
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; // Asegura que el overlay quede detrás del contenido
+}

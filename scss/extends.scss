@@ -1,0 +1,14 @@
+// _extends.scss
+
+//Quita el borde a las tarjetas de las comidas y actividades
+%border {
+    border: none;
+  }
+  
+//Establece el color de letras
+  %centered-text {
+    color: $text-color;
+  }
+
+  
+  

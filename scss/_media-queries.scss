@@ -1,0 +1,19 @@
+// _media-queries.scss
+//Ajusta la página para que sea adaptable
+@include media-query(768px) {
+    .header {
+      height: 400px;
+    }
+  
+    .circle-card {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  
+  @include media-query(576px) {
+    .header {
+      height: 300px;
+    }
+  }
+  

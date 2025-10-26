@@ -1,0 +1,59 @@
+@import 'extends';
+// _cards.scss
+
+.food-card {
+    text-align: center;
+    background-color: #f5e8d4;
+    @extend %border;
+}
+  .itinerary-card {
+    background-color: #e59866;
+    border: none;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.itinerary-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.itinerary-card:hover {
+    transform: scale(1.05);
+}
+
+.itinerary-card {
+    height: 100%;
+}
+
+.itinerary-card img {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.circle-card {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+
+  .text-decoration-none{
+    @extend %centered-text;
+  }
+
+body{
+    background-color: #f5e8d4;
+}
+  
+
+  

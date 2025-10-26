@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promotional Trip</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* General video styling */
+    .promo-video {
+      position: relative;
+      color: white;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+      height: 250px;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+
+    /* Text styles for the promotional trip */
+    .promo-text, .promo-hover-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: 700; /* Bold font for better readability */
+      font-family: 'Poppins', sans-serif;
+      transition: opacity 0.3s ease;
+      opacity: 1;
+      z-index: 2;
+      text-transform: uppercase; /* Make the text uppercase to match the style */
+      letter-spacing: 1px;
+      line-height: 1.3;
+    }
+
+    /* Initial text styles (white, clean, centered) */
+    .promo-text {
+      font-size: 1.8rem; /* Larger font for main titles */
+      color: white; /* White color for the main text */
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+
+    /* Hover text styles (white and clean) */
+    .promo-hover-text {
+      opacity: 0;
+      font-size: 1.1rem; /* Slightly larger hover text */
+      font-family: 'Poppins', sans-serif;
+      color: white; /* White color for the hover text */
+      line-height: 1.5; /* Increased line height for better readability */
+    }
+
+    /* Hover effect to show detailed text */
+    .promo-video:hover .promo-hover-text {
+      opacity: 1;
+    }
+
+    /* Hide initial text on hover */
+    .promo-video:hover .promo-text {
+      opacity: 0;
+    }
+
+    /* Darken the overlay background */
+    .promo-overlay {
+      background: rgba(0, 0, 0, 0.5);
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      transition: background 0.3s ease;
+      border-radius: 15px;
+    }
+
+    /* Darker overlay on hover */
+    .promo-video:hover .promo-overlay {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Video responsive and fitting */
+    .promo-video video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: 0;
+      object-fit: cover;
+    }
+
+    /* List style for hover text */
+    .promo-hover-text ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      font-weight: 300; /* Lighter font for list items */
+      display: flex; /* Flexbox for two columns */
+      flex-wrap: wrap; /* Allow wrapping */
+      justify-content: space-between; /* Space between columns */
+    }
+
+    .promo-hover-text li {
+      width: 45%; /* Each item takes up 45% of the width */
+      padding: 5px 0; /* Space between items */
+    }
+
+    .promo-hover-text li::before {
+      content: "• "; /* Bullet before list item */
+      color: #ffcc00; /* Add a bright bullet color for style */
+    }
+  </style>
+</head>
+<body>
+
+<div class="container my-4">
+  <div id="promoCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <!-- Día 1 -->
+      <div class="carousel-item active">
+        <div class="promo-video">
+          <video autoplay muted loop>
+            <source src="Img/academico.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+          </video>
+          <div class="promo-overlay"></div>
+          <div class="promo-text">Día 1: Isla Boca Grande</div>
+          <div class="promo-hover-text">
+            <ul>
+              <li>Recorrido rural con sendero ecológico</li>
+              <li>Terapia de bienestar</li>
+              <li>Visita a Charuqueira</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Día 2 -->
+      <div class="carousel-item">
+        <div class="promo-video">
+          <video autoplay muted loop>
+            <source src="Img/academico.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+          </video>
+          <div class="promo-overlay"></div>
+          <div class="promo-text">Día 2: Monumento y Playas</div>
+          <div class="promo-hover-text">
+            <ul>
+              <li>Visita al monumento en el municipio</li>
+              <li>Aveturismo, recorrido en kayak</li>
+              <li>Actividad libre</li>
+              <li>Paseo en lancha a Bajito Morro</li>
+              <li>Paseo por el malecón</li>
+              <li>Centro cultural Canalete</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Día 3 -->
+      <div class="carousel-item">
+        <div class="promo-video">
+          <video autoplay muted loop>
+            <source src="Img/academico.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+          </video>
+          <div class="promo-overlay"></div>
+          <div class="promo-text">Día 3: Guitarra Tumaco</div>
+          <div class="promo-hover-text">
+            <ul>
+              <li>Recorrido a caballo</li>
+              <li>Picnic en playas del Morro</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Día 4 -->
+      <div class="carousel-item">
+        <div class="promo-video">
+          <video autoplay muted loop>
+            <source src="Img/academico.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+          </video>
+          <div class="promo-overlay"></div>
+          <div class="promo-text">Día 4: Río Caunapí</div>
+          <div class="promo-hover-text">
+            <ul>
+              <li>Visita al Río Caunapí</li>
+              <li>Tour agroturístico</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

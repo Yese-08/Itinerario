@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAY TOURS</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="css/Styles.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Video de fondo -->
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#inicio">
+                <img src="img/icon.jpg" alt="Icono"> <!-- Reemplaza "img/icono.png" con la ruta de tu imagen -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPuntos" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Puntos
+                        </a>
+                        <ul class="dropdown-menu " aria-labelledby="navbarDropdownPuntos">
+                            <li><a class="dropdown-item" href="#Punto1">Punto 1</a></li>
+                            <li><a class="dropdown-item" href="#Punto2">Punto 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownItinerario" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Itinerario
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownItinerario">
+                            <li><a class="dropdown-item" href="itinerario1.html">Itinerario C&A</a></li>
+                            <li><a class="dropdown-item" href="itinerario2.html">Itinerario A&N</a></li>
+                            <li><a class="dropdown-item" href="itinerario3.html">Itinerario R&B</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Sección de introducción -->
+     <div class="gen">
+    <div id="inicio">
+        <div class="video-background">
+            <video autoplay muted loop class="w-100 h-100">
+                <source src="Img/fondo1.mp4" type="video/mp4">
+                Tu navegador no soporta videos HTML5.
+            </video>
+        </div>
+        <div class="intro">
+            <div>
+                <h1>¡Bienvenido a nuestro portal de itinerarios de viaje a San Andrés de Tumaco!</h1>
+                <p>
+                    Descubre las maravillas que esta hermosa ciudad tiene para ofrecer.
+                    Desde playas de ensueño hasta experiencias culturales únicas,
+                    hemos diseñado itinerarios que te ayudarán a explorar cada rincón de este paraíso.
+                    Prepárate para una aventura inolvidable llena de paisajes impresionantes y momentos mágicos. ¡Tu
+                    viaje
+                    comienza aquí!
+                </p>
+
+                
+            </div>
+            
+        </div>
+
+        
+    </div>
+
+    
+    <div class="cont">
+    <div class="graficas" id="Punto1">
+        <div class="container my-5 ">
+            <h2 class="text-center">Test Perfiles</h2>
+            <div class="row">
+
+                <!-- Imagen 1 -->
+                
+                <div class="col-md-4 mb-4 test-img">
+                    <img src="Img/viajer_academico.jpeg" class="img-fluid rounded shadow-lg image-hover" alt="Imagen 1"
+                        data-bs-toggle="modal" data-bs-target="#imageModal1">
+                </div>
+                                
+                
+                
+
+                <!-- Imagen 2 -->
+                <div class="col-md-4 mb-4 test-img">
+                    <img src="Img/viajer_aventurero.jpeg" class="img-fluid rounded shadow-lg image-hover" alt="Imagen 2"
+                        data-bs-toggle="modal" data-bs-target="#imageModal2">
+                </div>
+
+                <!-- Imagen 3 -->
+                <div class="col-md-4 mb-4 test-img">
+                    <img src="Img/viajer_relajacion.jpeg" class="img-fluid rounded shadow-lg image-hover" alt="Imagen 3"
+                        data-bs-toggle="modal" data-bs-target="#imageModal3">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Modal Imagen 1 -->
+        <div class="modal fade" id="imageModal1" tabindex="-1" aria-labelledby="imageModal1Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="imageModal1Label">Académico y Cultural</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="equal-size-container">
+                            <!-- Imagen 1 -->
+                            <div class="image-wrapper">
+                                <img src="Img/arquetipo.jpeg" class="img-fluid" alt="Imagen 3">
+                            </div>
+
+                            <!-- Imagen 2 -->
+                            <div class="image-wrapper">
+                                <img src="Img/grafica3.jpg" class="img-fluid" alt="Imagen 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Imagen 2 -->
+        <div class="modal fade" id="imageModal2" tabindex="-1" aria-labelledby="imageModal2Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="imageModal2Label">Aventurero y de naturaleza</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="equal-size-container">
+                            <!-- Imagen 1 -->
+                            <div class="image-wrapper">
+                                <img src="Img/arquetipo.jpeg" class="img-fluid" alt="Imagen 3">
+                            </div>
+
+                            <!-- Imagen 2 -->
+                            <div class="image-wrapper">
+                                <img src="Img/grafica3.jpg" class="img-fluid" alt="Imagen 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="imageModal3" tabindex="-1" aria-labelledby="imageModal3Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="imageModal3Label">Relajación y Bienestar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <!-- Imagen 1 -->
+                            <div class="col-md-6">
+                                <div class="image-wrapper">
+                                    <img src="Img/arquetipo.jpeg" class="img-fluid fixed-size" alt="Imagen 3">
+                                </div>
+                            </div>
+        
+                            <!-- Imagen 2 -->
+                            <div class="col-md-6">
+                                <div class="image-wrapper">
+                                    <img src="Img/grafica3.jpg" class="img-fluid fixed-size" alt="Imagen 3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <div class="container my-5 ">
+            <table class="table table-borderless table-hover tbl">
+                <thead class="thead">
+                    <tr class="text-uppercase text-muted">
+                        <th>Perfil</th>
+                        <th>Arquetipo</th>
+                        <th>Estilo aprendizaje </th>
+                        <th>Generacion</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="agent-info">
+                                <img src="Img/iconAcademico.png" alt="Jennifer John">
+                                <strong>Academico y Cultural</strong>
+
+                            </div>
+                        </td>
+                        <td>
+                            <div class="agent-info">
+
+                                <div>
+                                    <strong>Teórico</strong><br>
+
+                                </div>
+                            </div>
+                        </td>
+                        <td><strong>Explorador - Creador</strong></td>
+                        <td><strong>Generacion X</strong<br>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="agent-info">
+                                <img src="Img/iconAventurero.png" alt="David Smith">
+                                <strong> Aventurero y de naturaleza </strong>
+
+                            </div>
+                        </td>
+                        <td>
+                            <div class="agent-info">
+
+                                <div>
+                                    <strong>Teorico</strong><br>
+
+                                </div>
+                            </div>
+                        </td>
+                        <td><strong>Creador - Sabio</strong></td>
+                        <td><strong>Generacion X</strong<br>
+                        </td>
+                        <td class="action-icons">
+
+
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="agent-info">
+                                <img src="Img/iconRelajacion.png" alt="Emmily Johnson">
+                                <strong>Relajación y Bienestar</strong>
+
+                            </div>
+                        </td>
+                        <td>
+                            <div class="agent-info">
+
+                                <div>
+                                    <strong>Activo</strong><br>
+
+                                </div>
+                            </div>
+                        </td>
+                        <td><strong>Heroe - Cuidador - Amante- Bufon - Sabio</strong></td>
+                        <td><strong>Generacion X</strong<br>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <br>
+    </div>
+    <div class="itinerario" id="Punto2">
+        <div class="container text-center">
+            <h2 class="text-center">Itinerarios </h2>
+            <div class="row justify-content-center  g-4">
+                <div class="col-6 col-sm-4 col-md-3 mb-3">
+                    <div class="contenedorp2-imagen">
+                        <img src="Img/iti1.jpeg" alt="Imagen 1">
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 mb-3 ">
+                    <div class="contenedorp2-imagen">
+                        <img src="Img/iti2.jpeg" alt="Imagen 2">
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 mb-3">
+                    <div class="contenedorp2-imagen">
+                        <img src="Img/iti3.jpeg" alt="Imagen 2">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center text-lg-start">
+        <br><br><br>
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <h5 class="text-uppercase">Sobre Nosotros</h5>
+                    <p>
+                        En HAYTOURS, ofrecemos itinerarios personalizados para tus viajes. Descubre nuevas culturas y
+                        experiencias inolvidables.
+                    </p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-uppercase">Nuestros Servicios</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#!" class="text-white">Itinerarios Personalizados</a></li>
+                        <li><a href="#!" class="text-white">Guías de Viaje</a></li>
+                        <li><a href="#!" class="text-white">Reservas de Alojamiento</a></li>
+                        <li><a href="#!" class="text-white">Asesoría en Viajes</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-uppercase">Contáctanos</h5>
+                    <p>Calle mosquera, Tumaco</p>
+                    <p>Email: Haytour@gmail.com</p>
+                    <p>Teléfono: 3203033302</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center p-3 bg-dark">
+            <div class="social-icons">
+                <a href="#!"><img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook" /></a>
+                <a href="#!"><img src="https://img.icons8.com/color/48/000000/twitter-squared.png" alt="Twitter" /></a>
+                <a href="#!"><img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram" /></a>
+                <a href="#!"><img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn" /></a>
+            </div>
+            <div>
+                <a class="text-white" href="#!">Política de Privacidad</a>
+                |
+                <a class="text-white" href="#!">Términos de Servicio</a>
+                <p>© 2024 HAYTOUR. Todos los Derechos Reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JS (para funcionalidad del carrusel) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

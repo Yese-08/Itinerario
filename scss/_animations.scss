@@ -1,0 +1,15 @@
+// _animations.scss
+//Al recargar la página tarda 1 segundo en aparecer los elementos de las tarjetas
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .card {
+    animation: fadeIn 1s ease-in-out;
+  }
+  

@@ -1,0 +1,44 @@
+// _mixins.scss
+
+//Agrega las sombras a las tarjetas
+@mixin card-hover {
+    box-shadow: $card-shadow;
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale($card-hover-scale);
+    }
+  }
+  
+  //Centra algunos elementos
+  @mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin media-query($width) {
+    @media (max-width: $width) {
+      @content;
+    }
+  }
+  
+
+// Mixins
+
+// Mixin para aplicar transiciones de CSS
+// Permite definir propiedades de transición, duración y tipo de easing para facilitar cambios suaves en los estilos.
+@mixin transition($property: all, $duration: 0.4s, $ease: ease) {
+    transition: $property $duration $ease;
+}
+
+// Mixin para aplicar sombras a los elementos
+// Permite ajustar la sombra con valores para el desplazamiento en el eje X, eje Y, el difuminado y el color.
+@mixin box-shadow($x: 0, $y: 5px, $blur: 12px, $color: rgba(0, 0, 0, 0.5)) {
+    box-shadow: $x $y $blur $color;
+}
+
+// Mixin para aplicar bordes redondeados
+// Facilita la definición del radio del borde, permitiendo una apariencia más suave en los elementos.
+@mixin border-radius($radius: 5px) {
+    border-radius: $radius;
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Menu</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/itinerarioAventurero.css" rel="stylesheet">
+
+    <style>
+        /* Añade un espacio entre secciones para una mejor visualización */
+        section {
+            padding: 30px 0;
+        }
+
+        .menu-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        /* Ajustar las imágenes para que sean completamente responsivas */
+        .menu-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* Ajustes de tarjetas en secciones */
+        .menu-card, .promo-video {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+
+        .promo-video video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Ajustar elementos superpuestos */
+        .promo-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+
+        /* Asegura que el texto de la promo se vea bien */
+        .promo-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        /* Ajustar margen para texto */
+        .menu-item-text {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">HAY</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#actividades">Actividades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Alojamiento">Alojamiento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Volver</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección del menú -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <h2 class="menu-title">Menú</h2>
+            <div class="row">
+                <!-- Día 1 y Día 3 en una columna responsiva -->
+                <div class="col-md-6">
+                    <div class="menu-card">
+                        <h3 class="menu-title">Día 1</h3>
+                        <div class="menu-item">
+                            <img src="Img/Desayuno.jpeg" alt="Desayuno en Hotel Nabú" class="img-fluid">
+                            <div class="menu-item-text">
+                                <div class="menu-item-title">Desayuno en Hotel Nabú</div>
+                                <div class="menu-item-price">Huevos cochados</div>
+                                <div class="menu-item-description">Hora: 9:00</div>
+                            </div>
+                        </div>
+                        <!-- Otros elementos del Día 1 -->
+                    </div>
+
+                    <div class="menu-card">
+                        <h3 class="menu-title">Día 3</h3>
+                        <div class="menu-item">
+                            <img src="Img/Desayuno3.jpeg" alt="Desayuno en Hotel Nabú" class="img-fluid">
+                            <div class="menu-item-text">
+                                <div class="menu-item-title">Desayuno en Hotel Nabú</div>
+                                <div class="menu-item-price">Huevos revueltos, Pan tostado, Tocineta, Jugo de naranja y café</div>
+                                <div class="menu-item-description">Hora: 8:00 - 10:00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Día 2 y Día 4 en otra columna responsiva -->
+                <div class="col-md-6">
+                    <div class="menu-card">
+                        <h3 class="menu-title">Día 2</h3>
+                        <div class="menu-item">
+                            <img src="Img/Desayuno2.jpeg" alt="Desayuno en Hotel Nabú" class="img-fluid">
+                            <div class="menu-item-text">
+                                <div class="menu-item-title">Desayuno en Hotel Nabú</div>
+                                <div class="menu-item-price">Tortilla de huevo, pan tostado, frutas y té</div>
+                                <div class="menu-item-description">Hora: 8:00 - 10:00</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <h3 class="menu-title">Día 4</h3>
+                        <div class="menu-item">
+                            <img src="Img/Desayuno4.jpeg" alt="Desayuno en Hotel Nabú" class="img-fluid">
+                            <div class="menu-item-text">
+                                <div class="menu-item-title">Desayuno en Hotel Nabú</div>
+                                <div class="menu-item-price">Arepa de maíz, Huevos estrellados, Queso costeño, Chocolate</div>
+                                <div class="menu-item-description">Hora: 8:00 - 10:00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de actividades -->
+    <section class="event-listing" id="actividades">
+        <div class="container my-4">
+            <h2 class="menu-title">Actividades y lugares a visitar</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="promo-video position-relative">
+                        <video autoplay muted loop class="img-fluid">
+                            <source src="Img/Aventura.mp4" type="video/mp4">
+                        </video>
+                        <div class="promo-overlay"></div>
+                        <div class="promo-text">Día 1: Isla Boca Grande</div>
+                    </div>
+                </div>
+                <!-- Otras tarjetas para actividades -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de alojamiento -->
+    <section id="Alojamiento">
+        <div class="container">
+            <h2 class="menu-title">Hoteles</h2>
+            <div class="row g-4 justify-content-center">
+                <!-- Tarjetas de hoteles -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
